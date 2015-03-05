@@ -1,18 +1,47 @@
-%header.navbar.navbar-inverse.navbar-fixed-top
+:javascript
+  $(document).ready(function(){
+    $(document).scroll(function(){
+      var scrollPos = $(document).scrollTop();
+      if(scrollPos >= 106){
+
+        $('#navbar').addClass("navscroll-background")
+        $('#navbar').removeClass("navbar-container")
+
+        $('#navbar-logo').addClass("navscroll-logo-container")
+        $('#navbar-logo').removeClass("logo-container")
+
+        $('#navbar-content').addClass("navscroll-content-wrapper")
+        $('#navbar-content').removeClass("nav-content-wrapper")
+      }
+      if(scrollPos < 106){
+
+        $('#navbar').removeClass("navscroll-background")
+        $('#navbar').addClass("navbar-container")
+
+        $('#navbar-logo').removeClass("navscroll-logo-container")
+        $('#navbar-logo').addClass("logo-container")
+
+        $('#navbar-content').removeClass("navscroll-content-wrapper")
+        $('#navbar-content').addClass("nav-content-wrapper")
+
+      }
+    });
+  });
+
+%nav#navbar.navbar-container
   .container
-    .navbar-header
-      %button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
-        %span.sr-only Toggle navigation
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      %a.navbar-brand{:href => "#"} Project name
-    #navbar.collapse.navbar-collapse
-      %ul.nav.navbar-nav
-        %li.active
-          %a{:href => "#"} Home
+    #navbar-logo.logo-container
+      =image_tag "ps-logo.jpg", class: "logo"
+    #navbar-content.nav-content-wrapper
+      %ul.navbar-ul
         %li
-          %a{:href => "#about"} About
+          %a{href: "#about",class: "active"} HOME
         %li
-          %a{:href => "#contact"} Contact
-          -#/ /.nav-collapse
+          %a{href: "#about"} ABOUT
+        %li
+          %a{href: "#about"} WHAT WE DO
+        %li
+          %a{href: "#about"} PRODUCTS
+        %li
+          %a{href: "#about"} CONTACT US
+    .clear-class

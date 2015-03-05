@@ -12,7 +12,7 @@ html {
 }
 body {
   margin: 0;
-  background: url("background-img.jpg");
+  background: url("background-img1.jpg");
 }
 article,
 aside,
@@ -4476,7 +4476,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #ccc;
 }
 .navbar-inverse {
-  background-color: #222;
+  /*background-color: #222;*/
   border-color: #080808;
 }
 .navbar-inverse .navbar-brand {
