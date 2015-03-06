@@ -12,7 +12,8 @@ html {
 }
 body {
   margin: 0;
-  background: url("background-img1.jpg");
+  background: url("background-img.jpg") no-repeat, linear-gradient(#FFFFFF,#DDDDDD,#C2C2C2);
+  background-size: 1600px 1000px;
 }
 article,
 aside,
@@ -1079,7 +1080,6 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #fff;
 }
 input,
 button,
