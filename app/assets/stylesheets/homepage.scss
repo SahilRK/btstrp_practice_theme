@@ -3,9 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .first-content-wrapper{
   margin-top:150px;
+  .jumbotron{
+    text-align: center;
+    background:transparent;
+    color:#0272a7;
+  }
 }
 .second-content-wrapper{
-  background-color:#ffffff;
+  background-color:#F5F5F5;
   margin-top:380px;
   padding-bottom:300px;
   .container h1{
@@ -14,7 +19,6 @@
     margin-top:100px;
   }
   .content-sub-wrapper{
-//    background-color: #ddd;
     margin-top:50px;
     .content-desc{
       width: 50%;
@@ -23,14 +27,17 @@
     .content-img{
       width:50%;
       float:left;
-//      background-color: #555555;
       img{
         width:500px;
         height:500px;
       }
     }
   }
+  .page_header{
+    border-bottom:5px solid #0272a7;
+  }
 }
 .third-content-wrapper{
-  padding-bottom:600px;
+
 }
+

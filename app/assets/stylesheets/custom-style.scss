@@ -28,8 +28,6 @@
       }
       a:hover{
         text-decoration:none;
-        background-color: #433F40;
-        color:#ffffff;
         border-bottom: 2px solid #ddd;
       }
     }
@@ -77,9 +75,15 @@
       }
       a.active{
         background-color: #433F40;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
         color:#ffffff;
       }
       a:hover{
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
         text-decoration:none;
         background-color: #433F40;
         color:#ffffff;
