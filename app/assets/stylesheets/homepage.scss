@@ -5,14 +5,18 @@
   margin-top:150px;
   .jumbotron{
     text-align: center;
-    background:transparent;
+    background:rgba(0,0,0,0.6);
     color:#0272a7;
   }
 }
 .second-content-wrapper{
-  background-color:#F5F5F5;
-  margin-top:380px;
+  background-color:#FFFFFF;
+  margin-top:350px;
   padding-bottom:300px;
+  .jumbotron{
+    margin-top:50px;
+    padding-bottom:250px;
+  }
   .container h1{
     color:#0272a7;
     text-align:center;
@@ -38,6 +42,16 @@
   }
 }
 .third-content-wrapper{
-
+  background-color:#F6F5F0;
+  padding-bottom: 300px;
+  .jumbotron{
+    margin-top:50px;
+  }
 }
-
+.fourth-content-wrapper{
+  background-color:#151515;
+  padding-bottom: 300px;
+  .jumbotron{
+    margin-top:50px;
+  }
+}
