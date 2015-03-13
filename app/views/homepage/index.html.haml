@@ -1,36 +1,51 @@
+-#:javascript
+-#  $(document).ready(function(){
+-#    $(document).scroll(function(){
+-#      var scrollPos = $(document).scrollTop();
+-#      else if (scrollPos >= 790){
+-#        $('#custom-navtab-pos').addClass("navscroll-background")
+-#        $('#custom-navtab-pos').removeClass("custom-second-header-design")
+-#      }
+-#    });
+-#  });
+
 %div.first-content-wrapper
   .container
     %div.jumbotron
       %h1= "Bootstrap starter template"
       %p.lead= "All you get is this text and a mostly barebones HTML"
 %div.second-content-wrapper
+  #custom-navtab-pos.custom-second-header-design
+    %p= "BOOTSTRAP US"
   .container
-    %div.page-header
-      %h1= "Bootstrap starter template"
     %div.jumbotron
-      %div.col-md-4
+      .col-md-4
         %a.thumbnail
           =image_tag "background-img.jpg"
-      %div.col-md-8
+      .col-md-8
         %p.lead= "All you get is this text and a mostly barebones HTML"
     %div.jumbotron
-      %div.col-md-8
+      .col-md-8
         %p.lead= "All you get is this text and a mostly barebones HTML"
-      %div.col-md-4
+      .col-md-4
         %a.thumbnail
           =image_tag "background-img.jpg"
     %div.jumbotron
-      %div.col-md-4
+      .col-md-4
         %a.thumbnail
           =image_tag "background-img.jpg"
-      %div.col-md-8
+      .col-md-8
         %p.lead= "All you get is this text and a mostly barebones HTML"
 %div.third-content-wrapper
+  .custom-third-header-design
+    %p= "BOOTSTRAP US"
   .container
     %div.jumbotron
       %h1= "Bootstrap starter template"
       %p.lead= "All you get is this text and a mostly barebones HTML"
 %div.fourth-content-wrapper
+  .custom-fourth-header-design
+    %p= "BOOTSTRAP US"
   .container
     %div.jumbotron
       %h1= "Bootstrap starter template"
