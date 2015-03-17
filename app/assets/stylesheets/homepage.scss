@@ -28,37 +28,19 @@
       box-shadow: 0px 0px 8px 2px #DDDDDD;
     }
   }
-  .custom-second-header-design1{
-    p{
-      width:100%;
-      position: fixed;
-      top:-10px;
-      overflow-y:auto;
-      background: -webkit-linear-gradient(#ffffff, #eeeeee 50%, #F6F5F0); /* For Safari 5.1 to 6.0 */
-      background: -o-linear-gradient(#ffffff, #eeeeee 50%, #F6F5F0); /* For Opera 11.1 to 12.0 */
-      background: -moz-linear-gradient(#ffffff, #eeeeee 50%, #F6F5F0); /* For Firefox 3.6 to 15 */
-      background: linear-gradient(#ffffff, #eeeeee 50%, #F6F5F0); /* Standard syntax (must be last) */
-      //  background-image: linear-gradient(#484e55, #3a3f44 60%, #313539);
-      //  background-color:#F6F5F0;
-      -webkit-box-shadow: 0px 0px 8px 2px #DDDDDD;
-      -moz-box-shadow: 0px 0px 8px 2px #DDDDDD;
-      box-shadow: 0px 0px 8px 2px #DDDDDD;
-    }
-  }
-  .jumbotron{
-    margin-top:10px;
-    padding-bottom:250px;
+
+  .container {
+    background-color:#F6F5F0;
+    color:#0272a7;
+    margin-top:30px;
+    padding:60px;
+    border-radius: 6px;
     .col-md-4{
       position:static;
     }
-    .col-md-8{
+    .col-md-12{
       position:static;
     }
-  }
-  .container h1{
-    color:#0272a7;
-    text-align:center;
-    margin-top:100px;
   }
   .content-sub-wrapper{
     margin-top:50px;
