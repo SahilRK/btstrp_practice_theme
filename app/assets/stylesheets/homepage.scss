@@ -13,8 +13,9 @@
   background-color:#FFFFFF;
   margin-top:350px;
   padding-bottom:50px;
-  .custom-second-header-design{
+  .custom-header-two{
     padding-bottom: 60px;
+    margin-top:40px;
     p{
       background-color:#F6F5F0;
       text-align:center;
@@ -28,18 +29,26 @@
       box-shadow: 0px 0px 8px 2px #DDDDDD;
     }
   }
-
-  .container {
-    background-color:#F6F5F0;
-    color:#0272a7;
-    margin-top:30px;
-    padding:60px;
-    border-radius: 6px;
-    .col-md-4{
-      position:static;
-    }
-    .col-md-12{
-      position:static;
+  .content-container {
+    .container {
+      background-color: #F6F5F0;
+      color: #0272a7;
+      padding: 60px;
+      border-radius: 6px;
+      .col-md-4 {
+        position: static;
+      }
+      .col-md-12 {
+        background-color:#F1F1F1;
+        position: static;
+        ul{
+          padding:0px;
+          li{
+            text-decoration: none;
+            list-style-type: none;
+          }
+        }
+      }
     }
   }
   .content-sub-wrapper{
@@ -63,13 +72,13 @@
 }
 .third-content-wrapper{
   background-color:#F6F5F0;
-  padding-bottom: 300px;
-  margin-top:175px;
+  padding-bottom: 50px;
   .jumbotron{
     margin-top:10px;
   }
-  .custom-third-header-design{
+  .custom-header-three{
     padding-bottom: 60px;
+    margin-top:40px;
     p{
       background-color:#FFFFFF;
       text-align:center;
@@ -86,13 +95,13 @@
 }
 .fourth-content-wrapper{
   background-color:#FFFFFF;
-  padding-bottom: 300px;
-  margin-top:175px;
+  padding-bottom: 50px;
   .jumbotron{
     margin-top:10px;
   }
-  .custom-fourth-header-design{
+  .custom-header-four{
     padding-bottom: 60px;
+    margin-top:40px;
     p{
       background-color:#F6F5F0;
       text-align:center;

@@ -1,13 +1,22 @@
--#:javascript
--#  $(document).ready(function(){
--#    $(document).scroll(function(){
--#      var scrollPos = $(document).scrollTop();
--#      else if (scrollPos >= 790){
--#        $('#custom-navtab-pos').addClass("navscroll-background")
--#        $('#custom-navtab-pos').removeClass("custom-second-header-design")
--#      }
--#    });
--#  });
+:javascript
+  function display_hidden_content(block_value){
+    var content_value = block_value;
+    if(content_value == "first-content-show-hide"){
+      $('#content-one').show().stop().fadeIn('slow', 0.6);
+      $('#content-two').hide();
+      $('#content-three').hide();
+    }
+    else if(content_value == "second-content-show-hide"){
+      $('#content-one').hide();
+      $('#content-two').show();
+      $('#content-three').hide();
+    }
+    else if(content_value == "third-content-show-hide"){
+      $('#content-one').hide();
+      $('#content-two').hide();
+      $('#content-three').show();
+    }
+  }
 
 %div.first-content-wrapper
   .container
@@ -15,32 +24,42 @@
       %h1= "Bootstrap starter template"
       %p.lead= "All you get is this text and a mostly barebones HTML"
 %div.second-content-wrapper
-  .custom-second-header-design
-    %p= "BOOTSTRAP US"
   .container
-    .col-md-4
-      %a.thumbnail
-        =image_tag "background-img.jpg"
-    .col-md-4
-      %a.thumbnail
-        =image_tag "background-img.jpg"
-    .col-md-4
-      %a.thumbnail
-        =image_tag "background-img.jpg"
+    .custom-header-two
+      %p= "BOOTSTRAP US"
+  .content-container
+    .container
+      .col-md-4
+        %a.thumbnail
+          =image_tag "back-imgs3.png", id: "first-content-show-hide", onmouseover: "display_hidden_content(this.id);"
+      .col-md-4
+        %a.thumbnail
+          =image_tag "back-imgs4.png", id: "second-content-show-hide", onmouseover: "display_hidden_content(this.id);"
+      .col-md-4
+        %a.thumbnail
+          =image_tag "back-imgs5.png", id: "third-content-show-hide", onmouseover: "display_hidden_content(this.id);"
 
-    .col-md-12{style: "background-color:#f1f1f1;"}
-      %p.lead= "All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
+      .col-md-12
+        %ul
+          %li
+            %p.lead{style:"display:show;", id: "content-one" }= "All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
+          %li
+            %p.lead{style:"display:none;", id: "content-two" }= "barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
+          %li
+            %p.lead{style:"display:none;", id: "content-three" }= "HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
 
 %div.third-content-wrapper
-  .custom-third-header-design
-    %p= "BOOTSTRAP US"
+  .container
+    .custom-header-three
+      %p= "BOOTSTRAP US"
   .container
     %div.jumbotron
       %h1= "Bootstrap starter template"
       %p.lead= "All you get is this text and a mostly barebones HTML"
 %div.fourth-content-wrapper
-  .custom-fourth-header-design
-    %p= "BOOTSTRAP US"
+  .container
+    .custom-header-four
+      %p= "BOOTSTRAP US"
   .container
     %div.jumbotron
       %h1= "Bootstrap starter template"
