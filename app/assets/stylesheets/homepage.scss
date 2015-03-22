@@ -37,16 +37,15 @@
       border-radius: 6px;
       .col-md-4 {
         position: static;
-      }
-      .col-md-12 {
-        background-color:#F1F1F1;
-        position: static;
-        ul{
-          padding:0px;
-          li{
-            text-decoration: none;
-            list-style-type: none;
-          }
+        .thumbnail{
+          border:none;
+        }
+        h3{
+          text-align:center;
+          background-color:#FFFFFF;
+        }
+        p{
+          background-color:#DDDDDD;
         }
       }
     }
