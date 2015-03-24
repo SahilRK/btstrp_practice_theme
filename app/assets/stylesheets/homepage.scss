@@ -35,6 +35,12 @@
       color: #0272a7;
       padding: 60px;
       border-radius: 6px;
+      .row{
+        margin-bottom:20px;
+        -webkit-box-shadow: 0px 0px 8px 2px #DDDDDD;
+        -moz-box-shadow: 0px 0px 8px 2px #DDDDDD;
+        box-shadow: 0px 0px 8px 2px #DDDDDD;
+      }
       h1{
         background: -webkit-linear-gradient(#ffffff, #eeeeee 50%, #F6F5F0); /* For Safari 5.1 to 6.0 */
         background: -o-linear-gradient(#ffffff, #eeeeee 50%, #F6F5F0); /* For Opera 11.1 to 12.0 */
