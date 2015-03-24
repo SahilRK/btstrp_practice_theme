@@ -6,70 +6,63 @@
 %div.second-content-wrapper
   .container
     .custom-header-two
-      %p= "BOOTSTRAP US"
+      .page-header
+        %p= "BOOTSTRAP US"
   .content-container
     .container
       .row
-        %h1= "Content Header 1"
-        .col-md-12
-          .col-md-4
-            .thumbnail
-              =image_tag "sliderimg1.jpg",class: "img-rounded"
-          .col-md-8
-            %p.lead= "All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
-      .row
-        %h1= "Content Header 1"
-        .col-md-12
-          .col-md-4
-            .thumbnail
-              =image_tag "sliderimg2.jpg",class: "img-rounded"
-          .col-md-8
-            %p.lead= "barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
-      .row
-        %h1= "Content Header 1"
-        .col-md-12
-          .col-md-4
-            .thumbnail
-              =image_tag "sliderimg8.jpg",class: "img-rounded"
-          .col-md-8
-            %p.lead= "HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
+        .col-sm-6.col-md-4
+          .thumbnail
+            =image_tag "sliderimg1.jpg",class: "img-rounded"
+            .caption
+              .page-header
+                %h3= "Thumbnail Content"
+              %p= "All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
+        .col-sm-6.col-md-4
+          .thumbnail
+            =image_tag "sliderimg2.jpg",class: "img-rounded"
+            .caption
+              .page-header
+                %h3= "Thumbnail Content"
+              %p= "All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
+        .col-sm-6.col-md-4
+          .thumbnail
+            =image_tag "sliderimg3.jpg",class: "img-rounded"
+            .caption
+              .page-header
+                %h3= "Thumbnail Content"
+              %p= "All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
 
 %div.third-content-wrapper
   .container
     .custom-header-three
-      %p= "BOOTSTRAP US"
+      .page-header
+        %p= "BOOTSTRAP US"
   .container
     .row
-      .col-md-6
-        =image_tag "sliderimg1.jpg", class: "img-responsive"
-      .col-md-6
-        =image_tag "sliderimg5.jpg",class: "img-responsive"
+      .col-md-12
+        .col-md-6
+          .thumbnail
+            =image_tag "sliderimg1.jpg",class: "img-responsive"
+        .col-md-6
+          .thumbnail
+            =image_tag "sliderimg5.jpg",class: "img-responsive"
     .row
-      .col-md-4
-        =image_tag "sliderimg2.jpg",class: "img-responsive"
-      .col-md-4
-        =image_tag "sliderimg7.jpg",class: "img-responsive"
-      .col-md-4
-        =image_tag "sliderimg8.jpg",class: "img-responsive"
-  -#.container
-  -#  .row
-  -#    .col-md-6
-  -#      .col-md-2
-  -#        =image_tag "sliderimg3.jpg"
-  -#      .col-md-4
-  -#        =image_tag "sliderimg7.jpg"
-  -#    .col-md-6
-  -#      .col-md-2
-  -#        =image_tag "sliderimg8.jpg"
-  -#      .col-md-4
-  -#        =image_tag "sliderimg1.jpg"
-    -#%div.jumbotron
-    -#  %h1= "Bootstrap starter template"
-    -#  %p.lead= "All you get is this text and a mostly barebones HTML"
+      .col-md-12
+        .col-md-4
+          .thumbnail
+            =image_tag "sliderimg2.jpg",class: "img-responsive"
+        .col-md-4
+          .thumbnail
+            =image_tag "sliderimg7.jpg",class: "img-responsive"
+        .col-md-4
+          .thumbnail
+            =image_tag "sliderimg8.jpg",class: "img-responsive"
 %div.fourth-content-wrapper
   .container
     .custom-header-four
-      %p= "BOOTSTRAP US"
+      .page-header
+        %p= "BOOTSTRAP US"
   .container
     %div.jumbotron
       %h1= "Bootstrap starter template"
