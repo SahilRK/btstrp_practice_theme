@@ -1,3 +1,19 @@
+:javascript
+  $(document).ready(function(){
+    $("#large-img-one").mouseover(function(){
+      $("#content-desc-one").show();
+    });
+    $("#large-img-two").mouseover(function(){
+      $("#content-desc-two").show();
+    });
+    $("#large-img-one").mouseout(function(){
+      $("#content-desc-one").hide();
+    });
+    $("#large-img-two").mouseout(function(){
+      $("#content-desc-two").hide();
+    });
+  });
+
 %div.first-content-wrapper
   .container
     %div.jumbotron
@@ -43,21 +59,48 @@
       .col-md-12
         .col-md-6
           .thumbnail
-            =image_tag "sliderimg1.jpg",class: "img-responsive"
+            =image_tag "sliderimg1.jpg",class: "img-responsive",id: "large-img-one"
         .col-md-6
           .thumbnail
-            =image_tag "sliderimg5.jpg",class: "img-responsive"
+            =image_tag "sliderimg5.jpg",class: "img-responsive",id: "large-img-two"
+    .row
+      .col-md-12
+        %ul
+          %li
+            #content-desc-one.content-desc-one{style: "display:none;"}
+              %h3= "Content Heading"
+              %p= "All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
+          %li
+            #content-desc-two.content-desc-two{style: "display:none;"}
+              %h3= "Content Heading"
+              %p= "All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
     .row
       .col-md-12
         .col-md-4
           .thumbnail
-            =image_tag "sliderimg2.jpg",class: "img-responsive"
+            =image_tag "sliderimg2.jpg",class: "img-responsive",id: "medium-img-one"
         .col-md-4
           .thumbnail
-            =image_tag "sliderimg7.jpg",class: "img-responsive"
+            =image_tag "sliderimg7.jpg",class: "img-responsive",id: "medium-img-two"
         .col-md-4
           .thumbnail
-            =image_tag "sliderimg8.jpg",class: "img-responsive"
+            =image_tag "sliderimg8.jpg",class: "img-responsive",id: "medium-img-three"
+    .row
+      .col-md-12
+        %ul
+          %li
+            #medium-img-content-desc-one.content-desc-one
+              %h3= "Content Heading"
+              %p= "All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
+          %li
+            #medium-img-content-desc-two.content-desc-three
+              %h3= "Content Heading"
+              %p= "All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
+          %li
+            #medium-img-content-desc-three.content-desc-two
+              %h3= "Content Heading"
+              %p= "All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
+
 %div.fourth-content-wrapper
   .container
     .custom-header-four
