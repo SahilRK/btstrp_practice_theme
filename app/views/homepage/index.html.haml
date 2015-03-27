@@ -1,19 +1,19 @@
 :javascript
   $(document).ready(function(){
     $("#large-img-one").mouseover(function(){
-      $("#content-desc-one").slideDown(1000);
+      $("#content-desc-one").slideDown(400);
     });
     $("#large-img-two").mouseover(function(){
-      $("#content-desc-two").slideDown(1000);
+      $("#content-desc-two").slideDown(400);
     });
     $("#medium-img-one").mouseover(function(){
-      $("#medium-img-content-desc-one").slideDown(1000);
+      $("#medium-img-content-desc-one").slideDown(400);
     });
     $("#medium-img-two").mouseover(function(){
-      $("#medium-img-content-desc-two").slideDown(1000);
+      $("#medium-img-content-desc-two").slideDown(400);
     });
     $("#medium-img-three").mouseover(function(){
-      $("#medium-img-content-desc-three").slideDown(1000);
+      $("#medium-img-content-desc-three").slideDown(400);
     });
     $("#large-img-one").mouseout(function(){
       $("#content-desc-one").slideUp(400);
@@ -32,9 +32,11 @@
     });
     $(document).scroll(function(){
       var scrollval = $(document).scrollTop();
-      if(scrollval = "506")
+      if(scrollval >= 606)
       {
-        $("#slide-header-two-content-three").slideDown(2000);
+        $("#slide-header-two-content-one").fadeIn(1200).slideDown(2000)
+        $("#slide-header-two-content-two").fadeIn(800).slideDown(2000)
+        $("#slide-header-two-content-three").fadeIn(600).slideDown(2000)
       }
     });
   });
