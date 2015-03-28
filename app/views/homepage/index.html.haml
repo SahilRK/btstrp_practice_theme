@@ -32,10 +32,10 @@
     });
     $(document).scroll(function(){
       var scrollval = $(document).scrollTop();
-      if(scrollval >= 606)
+      if(scrollval >= 315)
       {
-        $("#slide-header-two-content-one").fadeIn(1200).slideDown(2000)
-        $("#slide-header-two-content-two").fadeIn(800).slideDown(2000)
+        $("#slide-header-two-content-one").fadeIn(1400).slideDown(2000)
+        $("#slide-header-two-content-two").fadeIn(1000).slideDown(2000)
         $("#slide-header-two-content-three").fadeIn(600).slideDown(2000)
       }
     });
@@ -129,6 +129,40 @@
               %p= "All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
 
 %div.fourth-content-wrapper
+  .container
+    .custom-header-four
+      .page-header
+        %p= "BOOTSTRAP US"
+  .container
+    %p.lead= "All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
+
+%div.fifth-content-wrapper
+  .container
+    .custom-header-four
+      .page-header
+        %p= "BOOTSTRAP US"
+  .container
+    %p.lead= "All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
+
+%div.sixth-content-wrapper
+  .container
+    .custom-header-four
+      .page-header
+        %p= "BOOTSTRAP US"
+  .container
+    %div.jumbotron
+      %form.form-horizontal
+        .form-group
+          .col-lg-12
+            %input#inputEmail.form-control{:placeholder => "Email", :type => "text"}
+        .form-group
+          .col-lg-12
+            %textarea#textArea.form-control{placeholder: "Message *",:rows => "3"}
+        .form-group
+          .col-lg-10
+            .btn.btn-primary= "Primary"
+
+%div.footer-content
   .container
     .custom-header-four
       .page-header
