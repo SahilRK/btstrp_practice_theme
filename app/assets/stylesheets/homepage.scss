@@ -205,22 +205,78 @@
 .sixth-content-wrapper{
   background-color:#FAFAFA;
   padding-bottom: 50px;
-  .jumbotron{
-    margin-top:10px;
-  }
-  .custom-header-four{
-    padding-bottom: 60px;
-    margin-top:40px;
-    .page-header{
-      border-bottom: 1px solid #413F40;
+  .container{
+    .custom-header-four{
+      padding-bottom: 60px;
+      margin-top:40px;
+      .page-header{
+        border-bottom: 1px solid #413F40;
+      }
+      p{
+        text-align:center;
+        font-size:36px;
+        font-weight:bold;
+        font-family: 'PT Sans Narrow', sans-serif;
+        text-transform:capitalize;
+        color:#413F40;
+      }
     }
-    p{
-      text-align:center;
-      font-size:36px;
-      font-weight:bold;
-      font-family: 'PT Sans Narrow', sans-serif;
-      text-transform:capitalize;
-      color:#413F40;
+    .map-container-wrapper{
+      background-color: #ecf0f1;
+      padding-top:15px;
+      position:static;
+    }
+    .col-md-10{
+      #map-canvas{
+        width: 100%;
+        height: 400px;
+        background-color: #CCC;
+        position: static !important;
+      }
+    }
+    .col-md-6{
+      background-color: #5E7C94;
+      padding-top:15px;
+      position:static;
+      .page-header{
+       border-bottom: 1px solid #FFFFFF;
+       text-align:center;
+       color: #FFFFFF;
+        h2{
+          font-family: 'PT Sans Narrow', sans-serif;
+          font-weight: bold;
+        }
+      }
+    }
+    .contact-right-content{
+      background-color: #bfbfbf;
+      padding-top:15px;
+      padding-bottom:19px;
+      position:static;
+      .page-header{
+        border-bottom: 1px solid #FFFFFF;
+        text-align:center;
+        color: #FFFFFF;
+        h2{
+          font-family: 'PT Sans Narrow', sans-serif;
+          font-weight: bold;
+        }
+      }
+      .col-md-8{
+        margin-left:17%;
+        text-align:center;
+        h3{
+          font-family: 'PT Sans Narrow', sans-serif;
+          color: #FFFFFF;
+          margin-top:0px;
+        }
+        p{
+          font-weight: 700;
+          font-size: 16px;
+          margin:1px;
+          color: #FFFFFF;
+        }
+      }
     }
   }
 }

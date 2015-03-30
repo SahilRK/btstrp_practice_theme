@@ -39,6 +39,17 @@
         $("#slide-header-two-content-three").fadeIn(600).slideDown(2000)
       }
     });
+
+    function initialize() {
+      var mapCanvas = $("#map-canvas")[0];
+      var mapOptions = {
+        center: new google.maps.LatLng(12.989914, 80.268482),
+        zoom: 8,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      var map = new google.maps.Map(mapCanvas, mapOptions);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
   });
 
 %div.first-content-wrapper
@@ -150,17 +161,40 @@
       .page-header
         %p= "BOOTSTRAP US"
   .container
-    %div.jumbotron
+    .col-md-12.map-container-wrapper
+      .page-header
+        %h2= "OUR LOCATION"
+      %form.form-horizontal
+        .col-md-10
+          #map-canvas
+  .container
+    .col-md-6
+      .page-header
+        %h2= "ANY QUERIES? WRITE TO US"
       %form.form-horizontal
         .form-group
-          .col-lg-12
+          .col-md-12
             %input#inputEmail.form-control{:placeholder => "Email", :type => "text"}
         .form-group
-          .col-lg-12
+          .col-md-12
             %textarea#textArea.form-control{placeholder: "Message *",:rows => "3"}
         .form-group
-          .col-lg-10
+          .col-md-10
             .btn.btn-primary= "Primary"
+    .col-md-6.contact-right-content
+      .page-header
+        %h2= "VISIT US"
+      .col-md-8
+        %form.form-horizontal
+          %h3.comp-name= "Company Name"
+          %p= "Building ,Floor no"
+          %p= "Address 1st line"
+          %p= "Address 2nd line"
+          %p= "Address 3rd line"
+          %p= "Company landline no"
+          %p= "Company email id"
+        %form.form-horizontal
+          %p= "Company working hours"
 
 %div.footer-content
   .container
