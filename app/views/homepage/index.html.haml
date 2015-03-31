@@ -153,7 +153,31 @@
       .page-header
         %p= "BOOTSTRAP US"
   .container
-    %p.lead= "All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
+    .row
+      .col-md-3
+        .thumbnail
+          =image_tag "face1.jpg", class: "img-circle img-responsive circle-border"
+          .caption
+            %h3= "Person1"
+            %p.lead= "Designation"
+      .col-md-3
+        .thumbnail
+          =image_tag "face2.jpg", class: "img-circle img-responsive circle-border"
+          .caption
+            %h3= "Person2"
+            %p.lead= "Designation"
+      .col-md-3
+        .thumbnail
+          =image_tag "face3.jpg", class: "img-circle img-responsive circle-border"
+          .caption
+            %h3= "Person3"
+            %p.lead= "Designation"
+      .col-md-3
+        .thumbnail
+          =image_tag "face4.jpg", class: "img-circle img-responsive circle-border"
+          .caption
+            %h3= "Person4"
+            %p.lead= "Designation"
 
 %div.sixth-content-wrapper
   .container
@@ -165,7 +189,7 @@
       .page-header
         %h2= "OUR LOCATION"
       %form.form-horizontal
-        .col-md-10
+        .col-md-12.map-details-wrapper
           #map-canvas
   .container
     .col-md-6
@@ -198,8 +222,8 @@
 
 %div.footer-content
   .container
-    .custom-header-four
-      .page-header
-        %p= "BOOTSTRAP US"
-  .container
-    %p.lead= "All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
+    .col-
+    .col-md-8
+      %p= "Building ,Floor no"
+    .col-md-4
+      %p= "Building ,Floor no"
