@@ -57,6 +57,25 @@
     %div.jumbotron
       %h1= "Bootstrap starter template"
       %p.lead= "All you get is this text and a mostly barebones HTML"
+%div.navbar-content-wrapper
+  %nav.navbar.navbar-default
+    .container-fluid
+      .navbar-header
+        %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand{:href => "#"} Brand
+      #bs-example-navbar-collapse-1.collapse.navbar-collapse
+        %ul.nav.navbar-nav
+          %li.active
+            %a{:href => "#"}
+              Link
+              %span.sr-only (current)
+        %ul.nav.navbar-nav.navbar-right
+          %li
+            %a{:href => "#"} Link
 %div.second-content-wrapper
   .container
     .custom-header-two
@@ -148,35 +167,35 @@
     .col-md-10.tab-content-details
       %p.lead= "All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
   .container
-    .row
-      .col-md-6
-        .col-md-4
-          .thumbnail
-            =image_tag "face1.jpg", class: "img-responsive"
-        .col-md-8
+    .row.team-main-container
+      .col-sm-6.col-md-4
+        .thumbnail
+          =image_tag "face6.jpg", class: "img-responsive"
           .caption
             %h3= "Person1"
             %p.lead= "Designation"
-      .col-md-2
+            %p.about-desc= "All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
+      .col-sm-6.col-md-4
+        .thumbnail
+          =image_tag "face5.jpg", class: "img-responsive"
+          .caption
+            %h3= "Person1"
+            %p.lead= "Designation"
+            %p.about-desc= "All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
+      .col-sm-6.col-md-4
         .thumbnail
           =image_tag "face2.jpg", class: "img-responsive"
-      .col-md-4
-        .caption
-          %h3= "Person2"
-          %p.lead= "Designation"
-    .row
-      .col-md-3
-        .thumbnail
-          =image_tag "face3.jpg", class: "img-circle img-responsive circle-border"
           .caption
-            %h3= "Person3"
+            %h3= "Person1"
             %p.lead= "Designation"
-      .col-md-3
+            %p.about-desc= "All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
+      .col-sm-6.col-md-4
         .thumbnail
-          =image_tag "face4.jpg", class: "img-circle img-responsive circle-border"
+          =image_tag "face9.jpg", class: "img-responsive"
           .caption
-            %h3= "Person4"
+            %h3= "Person1"
             %p.lead= "Designation"
+            %p.about-desc= "All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
 
 %div.fifth-content-wrapper
   .container
