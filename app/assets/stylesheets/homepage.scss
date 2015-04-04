@@ -2,11 +2,32 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .navbar-content-wrapper{
-  margin-top:193px;
+  margin-top:163px;
   .navbar{
     background-image: none;
     border-radius: 0px;
     margin-bottom:0px;
+  }
+  .navbar-brand{
+    padding-left: 66px;
+    padding-top: 35px;
+    padding-bottom: 50px;
+    width: 200px;
+  }
+  .navbar-nav li{
+    padding: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+    color: #0f7864;
+    background-image:none;
+  }
+  .navbar-static{
+    top:0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
   }
 }
 

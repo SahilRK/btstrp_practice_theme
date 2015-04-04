@@ -31,12 +31,19 @@
       $("#medium-img-content-desc-three").slideUp(400);
     });
     $(document).scroll(function(){
-      var scrollval = $(document).scrollTop();
-      if(scrollval >= 315)
+      var scrollPos = $(document).scrollTop();
+      if(scrollPos >= 315)
       {
         $("#slide-header-two-content-one").fadeIn(1400).slideDown(2000)
         $("#slide-header-two-content-two").fadeIn(1000).slideDown(2000)
         $("#slide-header-two-content-three").fadeIn(600).slideDown(2000)
+      }
+      if(scrollPos >= 600)
+      {
+       $("#navbar").addClass('navbar-static');
+      }
+      else if(scrollPos < 590){
+       $("#navbar").removeClass('navbar-static');
       }
     });
 
@@ -58,7 +65,7 @@
       %h1= "Bootstrap starter template"
       %p.lead= "All you get is this text and a mostly barebones HTML"
 %div.navbar-content-wrapper
-  %nav.navbar.navbar-default
+  %nav#navbar.navbar.navbar-default
     .container-fluid
       .navbar-header
         %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
@@ -70,15 +77,15 @@
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
         %ul.nav.navbar-nav.navbar-right
           %li
-            %a{:href => "#"} Link
+            %a{:href => "#"} HOME
+          %li.active
+            %a{:href => "#"} WHAT WE DO
           %li
-            %a{:href => "#"} Link
+            %a{:href => "#"} PRODUCTS
           %li
-            %a{:href => "#"} Link
+            %a{:href => "#"} ABOUT US
           %li
-            %a{:href => "#"} Link
-          %li
-            %a{:href => "#"} Link
+            %a{:href => "#"} CONTACT US
 %div.second-content-wrapper
   .container
     .custom-header-two
