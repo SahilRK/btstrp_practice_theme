@@ -41,9 +41,11 @@
       if(scrollPos >= 600)
       {
        $("#navbar").addClass('navbar-static');
+       $("#resizable-page-header").addClass('resizable-page-header');
       }
       else if(scrollPos < 590){
        $("#navbar").removeClass('navbar-static');
+       $("#resizable-page-header").removeClass('resizable-page-header');
       }
     });
 
@@ -89,7 +91,7 @@
 %div.second-content-wrapper
   .container
     .custom-header-two
-      .page-header
+      #resizable-page-header.page-header
         %p= "BOOTSTRAP US"
   .content-container
     .container
@@ -248,10 +250,20 @@
         %form.form-horizontal
           %p= "Company working hours"
 
-%div.footer-content
+%div.sub-footer-wrapper
   .container
-    .col-
-    .col-md-8
-      %p= "Building ,Floor no"
-    .col-md-4
-      %p= "Building ,Floor no"
+    %ul
+      %li
+        %a{:href => "#"} HOME
+      %li
+        %a{:href => "#"} HOME
+      %li
+        %a{:href => "#"} HOME
+      %li
+        %a{:href => "#"} HOME
+      %li
+        %a{:href => "#"} HOME
+      %li
+        %a{:href => "#"} HOME
+  .container
+    This is content two
