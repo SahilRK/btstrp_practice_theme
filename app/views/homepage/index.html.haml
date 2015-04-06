@@ -31,22 +31,45 @@
       $("#medium-img-content-desc-three").slideUp(400);
     });
     $(document).scroll(function(){
-      var scrollPos = $(document).scrollTop();
-      if(scrollPos >= 315)
+      var scrollVal = $(document).scrollTop();
+      if(scrollVal >= 315)
       {
         $("#slide-header-two-content-one").fadeIn(1400).slideDown(2000)
         $("#slide-header-two-content-two").fadeIn(1000).slideDown(2000)
         $("#slide-header-two-content-three").fadeIn(600).slideDown(2000)
       }
-      if(scrollPos >= 600)
+      if(scrollVal >= 600)
       {
        $("#navbar").addClass('navbar-static');
        $("#resizable-page-header").addClass('resizable-page-header');
       }
-      else if(scrollPos < 590){
+      else if(scrollVal < 590){
        $("#navbar").removeClass('navbar-static');
        $("#resizable-page-header").removeClass('resizable-page-header');
       }
+    });
+
+    $(document).on("scroll", onScroll);
+
+    //smoothscroll
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+
+        $('li').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top+2
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
     });
 
     function initialize() {
@@ -61,7 +84,24 @@
     google.maps.event.addDomListener(window, 'load', initialize);
   });
 
-%div.first-content-wrapper
+
+  function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('#menu-center li').each(function () {
+      var currLink = $(this);
+      alert(refElement.position().top);
+      var refElement = $(currLink.attr("href"));
+      if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+        $('#menu-center ul li').removeClass("active");
+        currLink.addClass("active");
+      }
+      else{
+        currLink.removeClass("active");
+      }
+    });
+  }
+
+%div#home.first-content-wrapper
   .container
     %div.jumbotron
       %h1= "Bootstrap starter template"
@@ -77,18 +117,19 @@
           %span.icon-bar
         %a.navbar-brand{:href => "#"} Brand
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
-        %ul.nav.navbar-nav.navbar-right
-          %li
-            %a{:href => "#"} HOME
-          %li.active
-            %a{:href => "#"} WHAT WE DO
-          %li
-            %a{:href => "#"} PRODUCTS
-          %li
-            %a{:href => "#"} ABOUT US
-          %li
-            %a{:href => "#"} CONTACT US
-%div.second-content-wrapper
+        #menu-center
+          %ul.nav.navbar-nav.navbar-right
+            %li.active
+              %a{:href => "#home"} HOME
+            %li
+              %a{:href => "#our-work"} WHAT WE DO
+            %li
+              %a{:href => "#products"} PRODUCTS
+            %li
+              %a{:href => "#about-us"} ABOUT US
+            %li
+              %a{:href => "#contact-us"} CONTACT US
+%div#our-work.second-content-wrapper
   .container
     .custom-header-two
       #resizable-page-header.page-header
@@ -118,7 +159,7 @@
                 %h3= "Thumbnail Content"
               %p= "All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
 
-%div.third-content-wrapper
+%div#products.third-content-wrapper
   .container
     .custom-header-three
       .page-header
@@ -170,7 +211,7 @@
               %h3= "Content Heading"
               %p= "All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
 
-%div.fourth-content-wrapper
+%div#about-us.fourth-content-wrapper
   .container
     .custom-header-four
       .page-header
@@ -209,7 +250,7 @@
             %p.lead= "Designation"
             %p.about-desc= "All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
 
-%div.fifth-content-wrapper
+%div#contact-us.fifth-content-wrapper
   .container
     .custom-header-four
       .page-header
@@ -254,16 +295,35 @@
   .container
     %ul
       %li
-        %a{:href => "#"} HOME
+        %a{:href => "#"} About Us
       %li
-        %a{:href => "#"} HOME
+        %a{:href => "#"} Disclaimer
       %li
-        %a{:href => "#"} HOME
+        %a{:href => "#"} Privacy Policy
       %li
-        %a{:href => "#"} HOME
+        %a{:href => "#"} Contact Us
       %li
-        %a{:href => "#"} HOME
-      %li
-        %a{:href => "#"} HOME
+        %a{:href => "#"} Terms and Conditions
+
   .container
-    This is content two
+    .col-md-10.social-media-icons-wrapper
+      %p= "Copyright 2015 @companyname. All Rights Reserved."
+      %ul
+        %li
+          =link_to "#" do
+            =image_tag "Facebook.png"
+        %li
+          =link_to "#" do
+            =image_tag "Twitter.png"
+        %li
+          =link_to "#" do
+            =image_tag "Google+.png"
+        %li
+          =link_to "#" do
+            =image_tag "Linked-in.png"
+        %li
+          =link_to "#" do
+            =image_tag "Tumblr.png"
+        %li
+          =link_to "#" do
+            =image_tag "Pinterest.png"
