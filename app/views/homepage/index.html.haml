@@ -49,28 +49,28 @@
       }
     });
 
-    $(document).on("scroll", onScroll);
-
-    //smoothscroll
-    $('a[href^="#"]').on('click', function (e) {
-        e.preventDefault();
-        $(document).off("scroll");
-
-        $('li').each(function () {
-            $(this).removeClass('active');
-        })
-        $(this).addClass('active');
-
-        var target = this.hash,
-            menu = target;
-        $target = $(target);
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top+2
-        }, 500, 'swing', function () {
-            window.location.hash = target;
-            $(document).on("scroll", onScroll);
-        });
-    });
+    //$(document).on("scroll", onScroll);
+    //
+    ////smoothscroll
+    //$('a[href^="#"]').on('click', function (e) {
+    //    e.preventDefault();
+    //    $(document).off("scroll");
+    //
+    //    $('li').each(function () {
+    //        $(this).removeClass('active');
+    //    })
+    //    $(this).addClass('active');
+    //
+    //    var target = this.hash,
+    //        menu = target;
+    //    $target = $(target);
+    //    $('html, body').stop().animate({
+    //        'scrollTop': $target.offset().top+2
+    //    }, 500, 'swing', function () {
+    //        window.location.hash = target;
+    //        $(document).on("scroll", onScroll);
+    //    });
+    //});
 
     function initialize() {
       var mapCanvas = $("#map-canvas")[0];
@@ -85,21 +85,21 @@
   });
 
 
-  function onScroll(event){
-    var scrollPos = $(document).scrollTop();
-    $('#menu-center li').each(function () {
-      var currLink = $(this);
-      alert(refElement.position().top);
-      var refElement = $(currLink.attr("href"));
-      if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-        $('#menu-center ul li').removeClass("active");
-        currLink.addClass("active");
-      }
-      else{
-        currLink.removeClass("active");
-      }
-    });
-  }
+  //function onScroll(event){
+  //  var scrollPos = $(document).scrollTop();
+  //  $('#menu-center li').each(function () {
+  //    var currLink = $(this);
+  //    alert(refElement.position().top);
+  //    var refElement = $(currLink.attr("href"));
+  //    if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+  //      $('#menu-center ul li').removeClass("active");
+  //      currLink.addClass("active");
+  //    }
+  //    else{
+  //      currLink.removeClass("active");
+  //    }
+  //  });
+  //}
 
 %div#home.first-content-wrapper
   .container
@@ -228,6 +228,7 @@
             %h3= "Person1"
             %p.lead= "Designation"
             %p.about-desc= "All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML,All you get is this text and a mostly barebones HTML"
+
       .col-sm-6.col-md-4
         .thumbnail
           =image_tag "face5.jpg", class: "img-responsive"
